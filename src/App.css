@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+/* our farm css start */
+.hero{
+  background-image: url(/public/image/download.jpg)   !important;;
+
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 300px;
+  
+}
+/* our farm css end */
+
+/* products css start */
+
+.milk-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.9s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.milk-img:hover {
+  transform: rotate(360deg);
+  border-radius: 50%;
+  border: 5px dotted rgb(255, 140, 0);
+}
+.milk-img-container{
+  overflow: hidden;
+
+}
+/* products css end */
+
+
+/* services css start */
+
+.services{
+  background-image: url(/public/image/bg-7.jpg)   !important;;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 300px;
+    
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* services css end */
+
+/* footer css start */
+  .footer-img{
+    background-image: url(/public/image/bg-6.jpg)   !important;;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 200px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* footer css end */
