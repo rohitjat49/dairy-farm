@@ -3,7 +3,7 @@ import React from 'react'
 const OurFarm = () => {
   return (
     <>
-  <div className='hero mt-5'>
+  <div className='hero  relative mb-20'>
   <div className="text-center pt-3">
     <h2 className='md:text-4xl sm:text-2xl font-bold hero-pattern'>
       Welcome To Our Farm!
@@ -21,8 +21,16 @@ const OurFarm = () => {
 
         our farm by our farmers and cows. Welcome to Jacksons!
       </span>
+      {/* <div className='absolute -bottom-16   text-center '>
+    <img src='/image/narmada text logo.png' width={200} />
+  </div> */}
+  <div className='absolute left-1/2 transform -translate-x-1/2 -bottom-16 text-center bg-background-color rounded-full '>
+  <img src='/image/narmada text logo.png' width={220} />
+</div>
+
     </div>
   </div>
+ 
 </div>
 
 

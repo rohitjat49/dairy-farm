@@ -6,7 +6,12 @@
     background-repeat: no-repeat !important;
     background-size: cover !important;
     height: 300px;
+    position: relative;
   
+}
+
+.heross{
+  position: absolute;
 }
 /* our farm css end */
 
@@ -54,3 +59,18 @@
     height: 200px;
   }
 /* footer css end */
+
+/* For screens smaller than 768px */
+/* contact page */
+.bg-contact {
+  background-image: url("/public/image/cow-2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* For screens smaller than 768px */
+
+.select-bg .bg-option:hover{
+  background-color: brown;
+}
+

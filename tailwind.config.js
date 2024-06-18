@@ -3,10 +3,12 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
       screens: {
+        xs:'368px',
         sm: '480px',
         md: '768px',
         lg: '1024px',
         xl: '1280px',
+        "2xl":"1580px",
       },
       spacing:{
         1:'0.25rem',
@@ -20,10 +22,11 @@ module.exports = {
         24:'6rem',
         28:'7rem',
         32:'8rem',
-        34:'9rem',
-        38:'10rem',
-        42:'11rem',
-        46:'20rem',
+        36:'9rem',
+        40:'10rem',
+        44:'11rem',
+        48:'12rem',
+        // 48:'20rem',
       },
       fontSize:{
         xs:'0.75rem',
@@ -39,8 +42,9 @@ module.exports = {
         12:['12px'],
         13:['13px'],
         14:['14px'],
-      },
+      }, 
       colors: {
+        'black':"#000000",
         'blue': '#1fb6ff',
         'pink': '#ff49db',
         'orange': '#fec321',
@@ -56,10 +60,7 @@ module.exports = {
     },
     extend: {
    
-      backgroundImage: {
-        'hero-pattern': "url('/image/download.jpg')",
-        'footer-texture': "url('/img/footer-texture.png')",
-      }
+    
   },
   plugins: [],
 }
