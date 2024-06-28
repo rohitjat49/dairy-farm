@@ -11,9 +11,9 @@ const About = () => {
   return (
     <>
     <SliderComponent/>
-    <div className="bg-background-color ">
+    <div className="bg-background-color  ">
       <div className="container mx-auto">
-        <p className="text-5xl font-bold text-center ">Safe and Healthy Milk</p>
+        <p className="text-5xl font-bold text-center pt-4 ">Safe and Healthy Milk</p>
         <div className="grid md:grid-cols-3  sm:grid-cols-2 gap-4 cursor-pointer mt-12 ">
           <div className="grid justify-items-center text-center  shadow-2xl p-8 bg-white">
             <img className="text-center  " src="/image/01.png" />

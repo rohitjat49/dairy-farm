@@ -24,7 +24,6 @@ const HomeComponent = () => {
    <FarmStory/>
    <ProductInfo/>
    <FreshMilkComponent/>
-
    <Teamcomponent/>
    <OurShop/>
     
