@@ -34,6 +34,14 @@
 
 }
 /* products css end */
+.milk-imgs {
+  display: block;
+  width: 50%;
+  border-radius: 50%;
+  height: auto;
+  transition: transform 0.9s ease;
+}
+
 
 
 /* services css start */
@@ -58,6 +66,8 @@
     background-size: cover !important;
     height: 200px;
   }
+
+  
 /* footer css end */
 
 /* For screens smaller than 768px */
@@ -66,11 +76,27 @@
   background-image: url("/public/image/cow-2.jpg");
   background-size: cover;
   background-position: center;
+  margin-top: 100px;
 }
 
 /* For screens smaller than 768px */
 
-.select-bg .bg-option:hover{
-  background-color: brown;
-}
+/* .team-bg{
+  background-image: url(/public/image/big_bg.jpg)   !important;;
 
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: auto;
+    position: relative;
+  
+} */
+ 
+
+.latest-Blog{
+  background-color: #997c64;
+ 
+}
+.latest-mt{
+  top: 500px;
+}

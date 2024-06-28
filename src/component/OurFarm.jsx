@@ -24,7 +24,7 @@ const OurFarm = () => {
       {/* <div className='absolute -bottom-16   text-center '>
     <img src='/image/narmada text logo.png' width={200} />
   </div> */}
-  <div className='absolute left-1/2 transform -translate-x-1/2 -bottom-16 text-center bg-background-color rounded-full '>
+  <div className='absolute left-1/2 transform -translate-x-1/2 -bottom-16 text-center bg-background-color rounded-full p-10'>
   <img src='/image/narmada text logo.png' width={220} />
 </div>
 

@@ -1,10 +1,17 @@
 import React from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const BlogComponent = () => {
   return (
     <>
+    <Navbar/>
+    <div className="bg-background-color py-24">
+      <div className="container mx-auto">
+
+      
       <div className="grid md:grid-cols-4  sm:grid-cols-2 gap-4 cursor-pointer mt-12 ">
-        <div className="grid justify-items-center text-center shadow-2xl p-8 bg-white hover:bg-orange hover:text-white transition duration-300 ">
+        <div className="grid justify-items-center text-center shadow-2xl p-8 hover:bg-white bg-orange rounded-2xl transition duration-300 ">
           <img
             className="text-center transition duration-300 transform hover:scale-105"
             src="/image/image-19.jpg"
@@ -20,7 +27,8 @@ const BlogComponent = () => {
           </p>
         </div>
 
-        <div className="grid justify-items-center text-center shadow-2xl p-8 bg-white hover:bg-orange hover:text-white transition duration-300 ">
+        <div className="grid justify-items-center text-center shadow-2xl p-8 hover:bg-white bg-orange rounded-2xl transition duration-300 ">
+
           <img
             className="text-center transition duration-300 transform hover:scale-105"
             src="/image/image-20.jpg"
@@ -36,7 +44,8 @@ const BlogComponent = () => {
           </p>
         </div>
 
-        <div className="grid justify-items-center text-center  shadow-2xl p-8 bg-white hover:bg-orange hover:text-white transition duration-300">
+        <div className="grid justify-items-center text-center shadow-2xl p-8 hover:bg-white bg-orange rounded-2xl transition duration-300 ">
+
           <img
             className="text-center transition duration-300 transform hover:scale-105  "
             src="/image/image-21.jpg"
@@ -50,7 +59,8 @@ const BlogComponent = () => {
           </p>
         </div>
 
-        <div className="grid justify-items-center text-center  shadow-2xl p-8 bg-white hover:bg-orange hover:text-white transition duration-300">
+        <div className="grid justify-items-center text-center shadow-2xl p-8 hover:bg-white bg-orange rounded-2xl transition duration-300 ">
+
           <img
             className="text-center transition duration-300 transform hover:scale-105  "
             src="/image/image-22.jpg"
@@ -66,6 +76,9 @@ const BlogComponent = () => {
           </p>
         </div>
       </div>
+      </div>
+    </div>
+      <Footer/>
     </>
   );
 };

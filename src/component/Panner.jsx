@@ -1,7 +1,16 @@
 import React from "react";
 import AllProductImg from "./AllProductImg";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 const Panner = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate(`/Order-now`);
+  };
+
   return (
     <>
     <AllProductImg/>
@@ -9,7 +18,7 @@ const Panner = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 sm:grid-cols-1 items-center py-8 gap-8">
             <div className="flex justify-center items-center">
-              <img className="" src="/image/sdfsdfsdfsdfsdfdsf-removebg-preview.png" />
+              <img className="" src="/image/Panner.png" />
             </div>
             <div className=" flex flex-col justify-center items-start">
               <div className="text-5xl font-bold">Panner </div>
@@ -25,7 +34,8 @@ const Panner = () => {
               <div className="text-3xl font-bold mt-3">Variants Available:</div>
               <div className="">Cow and Buffalo </div>
               <div className="btn mt-12">
-                <button className="bg-orange hover:bg-white p-4  rounded-full px-8 font-bold text-xl">
+                <button className="bg-orange hover:bg-white p-4  rounded-full px-8 font-bold text-xl"
+                  onClick={() => handleButtonClick()}>
                   Order Now
                 </button>
               </div>
@@ -67,7 +77,7 @@ const Panner = () => {
             </div>
 
             <div className="flex justify-center  items-center">
-              <img className="" src="/image/a1-paneer-bg.jpg" />
+              <img className=""  src="/image/Panner.png" />
             </div>
           </div>
         </div>

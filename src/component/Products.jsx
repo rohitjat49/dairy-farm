@@ -34,8 +34,15 @@
 // export default Products
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Products = () => {
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate(`/Order-now`);
+  };
   return (
    <>
    <div className="bg-background-color">
@@ -48,22 +55,34 @@ const Products = () => {
       </div>
       <div className="border-t-2 border-orange w-20"></div>
     </div>
-    <div className="grid md:grid-cols-5 xs:grid-cols-2  gap-4 cursor-pointer px-3">
-        <div className='milk-img-container mt-5'>
+    <div className="grid md:grid-cols-3 xs:grid-cols-2  gap-4 cursor-pointer px-3">
+        <div className='milk-img-container text-center '>
             <img className='milk-img' src='/image/ghee.jpg' alt='cow' />
+            <p className='mt-2 font-bold text-2xl'>Ghee</p>
         </div>
-        <div className='milk-img-container'>
+        <div className='milk-img-container  text-center'>
             <img className='milk-img' src='/image/05.jpg' alt='cow'   />
+            <p className='mt-2 font-bold text-2xl'>Milk</p>
         </div>
-        <div className='milk-img-container'>
+        <div className='milk-img-container text-center'>
             <img className='milk-img' src='/image/02.jpg' alt='cow'  />
+            <p className='mt-2 font-bold text-2xl'>panner</p>
         </div>
-        <div className='milk-img-container'>
+        <div className='milk-img-container text-center'>
             <img className='milk-img' src='/image/ghee.jpg' alt='cow'  />
+            <p className='mt-2 font-bold text-2xl'>Crud</p>
         </div>
-        <div className='milk-img-container'>
+        <div className='milk-img-container text-center'>
             <img className='milk-img' src='/image/05.jpg' alt='cow'   />
+            <p className='mt-2 font-bold text-2xl'>text</p>
         </div>
+    </div>
+    <div className='text-center mt-8'>
+    <button className="bg-orange hover:bg-white p-4  rounded-full px-8 font-bold text-xl"
+                 onClick={() => handleButtonClick()}
+    >
+                  Order Now
+                </button>
     </div>
    </div>
    </div>

@@ -1,8 +1,24 @@
 import React from "react";
+import Ghee from "./Ghee";
+import Panner from "./Panner";
+import AllProductImg from "./AllProductImg";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
+
 
 const MilkProduct = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate(`/Order-now`);
+  };
+
   return (
     <>
+    <div className="mt-28">
+    <AllProductImg />
+    </div>
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 sm:grid-cols-1 items-center mt-8 gap-8">
           <div className="flex justify-center items-center">
@@ -21,7 +37,8 @@ const MilkProduct = () => {
             <div className="text-3xl font-bold mt-3">Variants Available:</div>
             <div className="">Cow and Buffalo </div>
             <div className="btn mt-12">
-              <button className="bg-orange hover:bg-white p-4  rounded-full px-8 font-bold text-xl">
+              <button className="bg-orange hover:bg-white p-4  rounded-full px-8 font-bold text-xl"
+                onClick={() => handleButtonClick()}>
                 Order Now
               </button>
             </div>
@@ -94,11 +111,14 @@ const MilkProduct = () => {
               </div>
             </div>
             <div className="flex justify-center  items-center">
-            <img className="" src="/image/sdfsdfsdfsdfsdfdsf-removebg-preview.png" />
+            <img className="" src="/image/buffalo milk.png" />
             </div>
           </div>
         </div>
       </div>
+      <Ghee/>
+      <Panner/>
+      
     </>
   );
 };

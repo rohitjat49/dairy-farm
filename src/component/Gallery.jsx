@@ -1,4 +1,6 @@
 import React from 'react'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 const Gallery = () => {
   return (
@@ -38,7 +40,7 @@ const Gallery = () => {
 
         </div>
         </div> */}
-<div className='grid grid-cols-4 gap-4 mt-12 overflow-x-hidden overflow-y-hidden'>
+{/* <div className='grid grid-cols-4 gap-4 mt-12 overflow-x-hidden overflow-y-hidden'>
 <div class="relative group">
     <img src='/image/img1.jpg' alt="Avatar" className="w-full h-auto ease-in-out opacity-100 group-hover:opacity-30  transition duration-300 transform hover:scale-105"/>
     <div class="absolute inset-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100">
@@ -89,7 +91,29 @@ const Gallery = () => {
         </div>
     </div>
 </div>
-</div>
+</div> */}
+<div className='container mx-auto '>
+  <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-4 mt-8 rounded-3xl">
+        <div className="">
+            <img src="/image/post-2.jpg" alt="Avatar" className="w-full h-full  rounded-3xl" />
+        </div>
+        <div className="">
+            <img src="/image/post-12.jpg" alt="Avatar" className="w-full h-full rounded-3xl " />
+        </div>
+        <div className="">
+            <img src="/image/post-10.jpg" alt="Avatar" className="w-full h-full rounded-3xl  " />
+        </div>
+    </div>
+
+    <div className="grid md:grid-cols-2 xs:grid-cols-1 gap-4 mt-4">
+        <div className="">
+            <img src="/image/post-8.jpg" alt="Avatar" className="w-full h-full rounded-3xl " />
+        </div>
+        <div className="">
+            <img src="/image/post-2.jpg" alt="Avatar" className="w-full h-full rounded-3xl  " />
+        </div>
+    </div>
+    </div>
 
 
         

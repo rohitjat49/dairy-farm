@@ -54,7 +54,8 @@ module.exports = {
         'gray-light': '#d3dce6',
         "background-color":"#f8f7e7",
         "white":"#fff",
-        'footer-background':"#ede1d7"
+        'footer-background':"#ede1d7",
+        "latest-Blog":"#997c64",
       },
       
     },

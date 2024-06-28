@@ -1,236 +1,301 @@
-import React, { useState } from 'react';
+
+
+
+// import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
+
+// const Navbar = () => {
+//     const [isOpen, setIsOpen] = useState(false);
+//     const [isProductOpen, setIsProductOpen] = useState(false);
+
+//     return (
+//         <div className="relative bg-footer-background shadow h-32 flex items-center justify-between px-4">
+//             <div className="logo">
+//                 <img src="../../image/narmada text logo.png" alt='img' className="" width="150px" />
+//             </div>
+//             <div className="hidden md:flex space-x-8 md:space-x-12 text-bold md:text-lg items-center justify-center">
+//                 <Link to="/" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Home</Link>
+//                 <Link to="/About" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">About</Link>
+//                 <div className="relative">
+//                     <button 
+//                         onMouseEnter={() => setIsProductOpen(true)}
+//                         onMouseLeave={() => setIsProductOpen(false)}
+//                         className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer"
+//                     >
+//                         Product
+//                     </button>
+//                     {isProductOpen && (
+//                         <div 
+//                             onMouseEnter={() => setIsProductOpen(true)}
+//                             onMouseLeave={() => setIsProductOpen(false)}
+//                             className="absolute left-0 w-48 bg-white z-40 shadow-md rounded-md mt-2"
+//                         >
+//                             <Link to="/Product/Milk" className="block px-4 py-2 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Milk</Link>
+//                             <Link to="/Product/Paneer" className="block px-4 py-2 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Paneer</Link>
+//                             <Link to="/Product/Mawa" className="block px-4 py-2 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Mawa</Link>
+//                             <Link to="/Product/Ghee" className="block px-4 py-2 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Ghee</Link>
+//                         </div>
+//                     )}
+//                 </div>
+//                 <Link to="/Order-now" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Order Now</Link>
+//                 <Link to="/Services" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Services</Link>
+//                 <Link to="/Gallery" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Gallery</Link>
+//                 <Link to="/Blog" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Blog</Link>
+//                 <Link to="/Contact" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Contact</Link>
+//             </div>
+//             <div className="md:hidden">
+//                 <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
+//                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+//                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+//                     </svg>
+//                 </button>
+//             </div>
+//             {isOpen && (
+//                 <div className="absolute top-16 left-0 w-full bg-background-color z-50 flex flex-col items-center space-y-4 py-4 md:hidden">
+//                     <Link to="/" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Home</Link>
+//                     <Link to="/About" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">About</Link>
+//                     <div className="relative">
+//                         <button 
+//                             onClick={() => setIsProductOpen(!isProductOpen)}
+//                             className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer"
+//                         >
+//                             Product
+//                         </button>
+//                         {isProductOpen && (
+//                             <div className="absolute -left-7 w-24 z-50 mt-12 bg-white shadow-md rounded-md mt-2">
+//                                 <Link to="/Product/Milk" className="block px-4 py-2 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Milk</Link>
+//                                 <Link to="/Product/Paneer" className="block px-4 py-2 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Paneer</Link>
+//                                 <Link to="/Product/Mawa" className="block px-4 py-2 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Mawa</Link>
+//                                 <Link to="/Product/Ghee" className="block px-4 py-2 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Ghee</Link>
+//                             </div>
+//                         )}
+//                     </div>
+//                     <Link to="/Order-now" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Order Now</Link>
+//                     <Link to="/Services" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Services</Link>
+//                     <Link to="/Gallery" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Gallery</Link>
+//                     <Link to="/Blog" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Blog</Link>
+//                     <Link to="/Contact" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Contact</Link>
+//                 </div>
+//             )}
+//         </div>
+//     );
+// }
+
+// export default Navbar;
+// import React, { useState, useRef, useEffect } from 'react';
+// import { Link, useLocation } from 'react-router-dom';
+
+// const Navbar = () => {
+//     const [isOpen, setIsOpen] = useState(false);
+//     const [isProductOpen, setIsProductOpen] = useState(false);
+//     const timeoutRef = useRef(null);
+//     const location = useLocation();
+
+//     useEffect(() => {
+//         window.scrollTo(0, 0);
+//     }, [location]);
+
+//     const handleMouseEnter = () => {
+//         if (timeoutRef.current) {
+//             clearTimeout(timeoutRef.current);
+//             timeoutRef.current = null;
+//         }
+//         setIsProductOpen(true);
+//     };
+
+//     const handleMouseLeave = () => {
+//         timeoutRef.current = setTimeout(() => {
+//             setIsProductOpen(false);
+//         }, 300); // Adjust the delay (300ms) as needed
+//     };
+
+//     return (
+//         <div className="fixed top-0 left-0 w-full bg-footer-background shadow h-28 flex items-center justify-between px-4 z-50">
+//             <div className="logo">
+//                 <img src="../../image/narmada text logo.png" alt='img' className="" width="150px" />
+//             </div>
+//             <div className="hidden md:flex space-x-8 md:space-x-12 text-bold md:text-lg items-center justify-center font-bold">
+//                 <Link to="/" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Home</Link>
+//                 <Link to="/About" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">About</Link>
+//                 <div className="relative"
+//                     onMouseEnter={handleMouseEnter}
+//                     onMouseLeave={handleMouseLeave}
+//                 >
+//                     <button 
+//                         className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer"
+//                     >
+//                         Product
+//                     </button>
+//                     {isProductOpen && (
+//                         <div 
+//                             className="absolute -left-5 w-32 bg-white z-40 shadow-md rounded-md mt-2 py-2"
+//                         >
+//                             <Link to="/Product/Milk" className="block px-4 py-1 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Milk</Link>
+//                             <Link to="/Product/Panner" className="block px-4 py-1 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Paneer</Link>
+//                             <Link to="/Product/Mawa" className="block px-4 py-1 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Mawa</Link>
+//                             <Link to="/Product/Ghee" className="block px-4 py-1 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Ghee</Link>
+//                             <Link to="/Product/Curd" className="block px-4 py-1 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Curd</Link>
+
+//                         </div>
+//                     )}
+//                 </div>
+//                 <Link to="/Order-now" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Order Now</Link>
+//                 <Link to="/Services" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Services</Link>
+//                 <Link to="/Gallery" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Gallery</Link>
+//                 <Link to="/Blog" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Blog</Link>
+//                 <Link to="/Contact" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Contact</Link>
+//             </div>
+//             <div className="md:hidden">
+//                 <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
+//                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+//                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+//                     </svg>
+//                 </button>
+//             </div>
+//             {isOpen && (
+//                 <div className="absolute top-16 left-0 w-full bg-background-color z-50 flex flex-col items-center space-y-4 py-4 md:hidden mt-12 font-bold">
+//                     <Link to="/" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Home</Link>
+//                     <Link to="/About" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">About</Link>
+//                     <div className="relative">
+//                         <button 
+//                             onClick={() => setIsProductOpen(!isProductOpen)}
+//                             className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer "
+//                         >
+//                             Product
+//                         </button>
+//                         {isProductOpen && (
+//                             <div className="absolute -left-7 w-24 z-50 mt-2 bg-white shadow-md rounded-md divide-y divide-dashed ">
+//                                 <Link to="/Product/Milk" className="block px-4 py-2 hover:text-orange  transition-all duration-300 cursor-pointer">Milk</Link>
+//                                 <Link to="/Product/Panner" className="block px-4 py-2 hover:text-orange  transition-all duration-300 cursor-pointer">Paneer</Link>
+//                                 <Link to="/Product/Mawa" className="block px-4 py-2 hover:text-orange  transition-all duration-300 cursor-pointer">Mawa</Link>
+//                                 <Link to="/Product/Ghee" className="block px-4 py-2 hover:text-orange  transition-all duration-300 cursor-pointer">Ghee</Link>
+//                                 <Link to="/Product/Curd" className="block px-4 py-2 hover:text-orange  transition-all duration-300 cursor-pointer">Curd</Link>
+
+//                             </div>
+//                         )}
+//                     </div>
+//                     <Link to="/Order-now" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Order Now</Link>
+//                     <Link to="/Services" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Services</Link>
+//                     <Link to="/Gallery" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Gallery</Link>
+//                     <Link to="/Blog" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Blog</Link>
+//                     <Link to="/Contact" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer">Contact</Link>
+//                 </div>
+//             )}
+//         </div>
+//     );
+// }
+
+// export default Navbar;
+
+
+import React, { useState, useRef, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [isProductOpen, setIsProductOpen] = useState(false);
+    const timeoutRef = useRef(null);
+    const location = useLocation();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        setIsOpen(false); // Close the mobile menu on route change
+    }, [location]);
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+    const handleMouseEnter = () => {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+            timeoutRef.current = null;
+        }
+        setIsProductOpen(true);
+    };
 
-  const closeDropdown = () => {
-    setIsDropdownOpen(false);
-  };
+    const handleMouseLeave = () => {
+        timeoutRef.current = setTimeout(() => {
+            setIsProductOpen(false);
+        }, 300); // Adjust the delay (300ms) as needed
+    };
 
-  const handleDropdownItemClick = (event) => {
-    // Add logic here for handling dropdown item click
-    console.log('Clicked:', event.target.innerText);
-    // Optionally, close dropdown after click
-    setIsDropdownOpen(false);
-  };
+    const toggleMobileMenu = () => {
+        setIsOpen(!isOpen);
+    };
 
-  return (
-    <nav className="bg-gray-800">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between h-16">
-          <div className="flex items-center justify-center">
-            <div className="flex-shrink-0">
-              <img
-                className="w-48 sm:w-64 md:w-80 lg:w-96 xl:w-120"
-                src="/image/narmada text logo.png"
-                alt="Workflow"
-              />
+    const closeMobileMenu = () => {
+        setIsOpen(false);
+    };
+
+    return (
+        <div className="fixed top-0 left-0 w-full bg-footer-background shadow h-28 flex items-center justify-between px-4 z-50">
+            <div className="logo">
+                <img src="../../image/narmada text logo.png" alt='img' className="" width="150px" />
             </div>
-          </div>
-
-          {/* Desktop navigation links */}
-          <div className="hidden sm:flex sm:items-center sm:justify-end sm:ml-10">
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-green-500 px-3 py-2 rounded-md text-xl font-medium"
-              >
-                Home
-              </a>
-              <div className="relative">
-                <button
-                  onClick={toggleDropdown}
-                  onMouseEnter={toggleDropdown}
-                  onMouseLeave={closeDropdown}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-green-500 px-3 py-2 rounded-md text-xl font-medium"
+            <div className="hidden md:flex space-x-8 md:space-x-12 text-bold md:text-lg items-center justify-center font-bold">
+                <Link to="/" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Home</Link>
+                <Link to="/About" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>About</Link>
+                <div className="relative"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
                 >
-                  About
-                </button>
-                {isDropdownOpen && (
-                  <div className="absolute mt-2 w-48 rounded-md shadow-lg bg-orange ring-1 ring-black ring-opacity-5">
-                    <div
-                      className="py-1"
-                      role="menu"
-                      aria-orientation="vertical"
-                      aria-labelledby="options-menu"
+                    <button 
+                        className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer"
                     >
-                      <a
-                        href="#"
-                        onClick={handleDropdownItemClick}
-                        className="block px-4 py-2 text-sm text-orange-500 hover:bg-gray-100 hover:text-black"
-                        role="menuitem"
-                      >
-                        Milk
-                      </a>
-                      <a
-                        href="#"
-                        onClick={handleDropdownItemClick}
-                        className="block px-4 py-2 text-sm text-orange-500 hover:bg-gray-100 hover:text-black"
-                        role="menuitem"
-                      >
-                        Ghee
-                      </a>
-                      <a
-                        href="#"
-                        onClick={handleDropdownItemClick}
-                        className="block px-4 py-2 text-sm text-orange-500 hover:bg-gray-100 hover:text-black"
-                        role="menuitem"
-                      >
-                        Mawa
-                      </a>
-                    </div>
-                  </div>
-                )}
-              </div>
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-green-500 px-3 py-2 rounded-md text-xl font-medium"
-              >
-                Services
-              </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-green-500 px-3 py-2 rounded-md text-xl font-medium"
-              >
-                Contact
-              </a>
-            </div>
-          </div>
-
-          {/* Mobile menu toggle button */}
-          <div className="flex sm:hidden">
-            <button
-              onClick={toggleMenu}
-              type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded={isOpen ? 'true' : 'false'}
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className={`${isOpen ? 'hidden' : 'block'} h-6 w-6`}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-              <svg
-                className={`${isOpen ? 'block' : 'hidden'} h-6 w-6`}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile menu */}
-      <div
-        className={`${isOpen ? 'block' : 'hidden'} sm:hidden`}
-        id="mobile-menu"
-      >
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Home
-          </a>
-          <div className="relative">
-            <button
-              onClick={toggleDropdown}
-              onMouseEnter={toggleDropdown}
-              onMouseLeave={closeDropdown}
-              className="text-gray-300 hover:bg-gray-700 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium"
-            >
-              About
-            </button>
-            {isDropdownOpen && (
-              <div className="absolute mt-1 w-48 rounded-md shadow-lg bg-orange ring-1 ring-black ring-opacity-5">
-                <div
-                  className="py-1"
-                  role="menu"
-                  aria-orientation="vertical"
-                  aria-labelledby="options-menu"
-                >
-                  <a
-                    href="#"
-                    onClick={handleDropdownItemClick}
-                    className="block px-4 py-2 text-sm text-orange-500 hover:bg-gray-100 hover:text-black"
-                    role="menuitem"
-                  >
-                    Milk
-                  </a>
-                  <a
-                    href="#"
-                    onClick={handleDropdownItemClick}
-                    className="block px-4 py-2 text-sm text-orange-500 hover:bg-gray-100 hover:text-black"
-                    role="menuitem"
-                  >
-                    Ghee
-                  </a>
-                  <a
-                    href="#"
-                    onClick={handleDropdownItemClick}
-                    className="block px-4 py-2 text-sm text-orange-500 hover:bg-gray-100 hover:text-black"
-                    role="menuitem"
-                  >
-                    Mawa
-                  </a>
+                        Product
+                    </button>
+                    {isProductOpen && (
+                        <div 
+                            className="absolute -left-5 w-32 bg-white z-40 shadow-md rounded-md mt-2 py-2"
+                        >
+                            <Link to="/Product/Milk" className="block px-4 py-1 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Milk</Link>
+                            <Link to="/Product/Panner" className="block px-4 py-1 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Paneer</Link>
+                            <Link to="/Product/Mawa" className="block px-4 py-1 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Mawa</Link>
+                            <Link to="/Product/Ghee" className="block px-4 py-1 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Ghee</Link>
+                            <Link to="/Product/Curd" className="block px-4 py-1 hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Curd</Link>
+                        </div>
+                    )}
                 </div>
-              </div>
+                <Link to="/Order-now" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Order Now</Link>
+                <Link to="/Services" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Services</Link>
+                <Link to="/Gallery" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Gallery</Link>
+                <Link to="/Blog" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Blog</Link>
+                <Link to="/Contact" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Contact</Link>
+            </div>
+            <div className="md:hidden">
+                <button onClick={toggleMobileMenu} className="focus:outline-none">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            {isOpen && (
+                <div className="absolute top-16 left-0 w-full bg-background-color z-50 flex flex-col items-center space-y-4 py-4 md:hidden mt-12 font-bold">
+                    <Link to="/" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Home</Link>
+                    <Link to="/About" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>About</Link>
+                    <div className="relative">
+                        <button 
+                            onClick={() => setIsProductOpen(!isProductOpen)}
+                            className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer "
+                        >
+                            Product
+                        </button>
+                        {isProductOpen && (
+                            <div className="absolute -left-7 w-24 z-50 mt-2 bg-white shadow-md rounded-md divide-y divide-dashed ">
+                                <Link to="/Product/Milk" className="block px-4 py-2 hover:text-orange  transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Milk</Link>
+                                <Link to="/Product/Panner" className="block px-4 py-2 hover:text-orange  transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Paneer</Link>
+                                <Link to="/Product/Mawa" className="block px-4 py-2 hover:text-orange  transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Mawa</Link>
+                                <Link to="/Product/Ghee" className="block px-4 py-2 hover:text-orange  transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Ghee</Link>
+                                <Link to="/Product/Curd" className="block px-4 py-2 hover:text-orange  transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Curd</Link>
+                            </div>
+                        )}
+                    </div>
+                    <Link to="/Order-now" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Order Now</Link>
+                    <Link to="/Services" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Services</Link>
+                    <Link to="/Gallery" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Gallery</Link>
+                    <Link to="/Blog" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Blog</Link>
+                    <Link to="/Contact" className="hover:text-orange hover:border-b-2 hover:border-orange transition-all duration-300 cursor-pointer" onClick={closeMobileMenu}>Contact</Link>
+                </div>
             )}
-          </div>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Services
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Contact
-          </a>
         </div>
-      </div>
-    </nav>
-  );
-};
+    );
+}
 
 export default Navbar;
-
-
-
-
-
-
-

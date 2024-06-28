@@ -1,9 +1,11 @@
 import React from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Services = () => {
   return (
     <>
-      <div className="bg-background-color pb-12">
+      <div className="bg-background-color py-24">
         <div className="services">
           <div className="container mx-auto">
             <p className="text-5xl text-white pt-12 font-bold text-center">Services</p>
@@ -71,12 +73,12 @@ Farm
           <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4 mt-8 mb-48">
             <div className="relative">
               <img className="  " src="/image/pro-pic2.jpg" />
-              <div class="absolute -bottom-48 left-24 p-8 ">
+              <div class="absolute md:-bottom-48 xs:-bottom-20 left-24 p-8 ">
                 <img className=" " src="/image/pro-pic1.jpg" />
               </div>
             </div>
 
-            <div className="">
+            <div className="md:mt-1 xs:mt-8">
               <p className="text-2xl text-green">DISCOVER SERVICES</p>
               <p className="text-5xl">For That You Will Take Our Products.</p>
               <p className="text-xl">
@@ -87,9 +89,10 @@ Farm
                 nec pellentesque sem porttitor et.
               </p>
 
-              <div className="btn mt-12">
-                   <button className="bg-orange p-4  rounded-full px-8 font-bold text-xl">Order Now</button>
-              </div>
+              {/* <div className="btn mt-12">
+                   <button className="bg-orange p-4  rounded-full px-8 font-bold text-xl"
+                   >Order Now</button>
+              </div> */}
             </div>
 
 
