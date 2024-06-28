@@ -63,7 +63,7 @@ const SliderComponent = () => {
               backgroundImage: `url(${slide.image})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
-              minHeight: "600px",
+              minHeight: "100vh",
               width: "100%",
               display: "flex",
               alignItems: "center",
